@@ -12,7 +12,7 @@
 
 	<maven.compiler.source>1.8</maven.compiler.source>
   <maven.compiler.target>1.8</maven.compiler.target>
- <lombok.version>1.18.38</lombok.version>
+
 	</properties>
 
 
@@ -43,13 +43,13 @@
 			<version>7.11.0</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
-		    <version>${lombok.version}</version>
+		    <version>1.18.20</version> <!-- Or newer -->
 		    <scope>provided</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -63,9 +63,10 @@
 						  <source>1.8</source>
 					    <target>1.8</target>
 					    <compilerArgs>
-				            <arg>--add-exports</arg>
-				            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-				        </compilerArgs>	
+					    
+					    
+		            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+		        </compilerArgs>
 					</configuration>
 
 				</plugin>
@@ -79,7 +80,6 @@
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					
-					  
  
 					</configuration>
 					
