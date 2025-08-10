@@ -62,10 +62,8 @@
 					<configuration>
 						  <source>1.8</source>
 					    <target>1.8</target>
+					    <encoding>UTF-8</encoding>
 					    <compilerArgs>
-					    
-					    
-		            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
 		        </compilerArgs>
 					</configuration>
 
