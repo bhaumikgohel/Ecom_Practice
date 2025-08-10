@@ -89,8 +89,10 @@ public class HomePage extends TestBase{
 		 
 		 System.out.println(ProductName);
 		 
+		 Thread.sleep(3000);
+		 
 		 return ProductName;
-
+		 
 		//ArrayList<ProductData> test = new ArrayList<>();
 		
 		//ProductData.ProductName1 = First_Product_Name.getText();
@@ -107,10 +109,15 @@ public class HomePage extends TestBase{
 		
 		Thread.sleep(3000);
 		Utils.ScrollUntil(bannertext);
+		Utils.FluentWaitforElement(bannertext,30);
+		
 		Thread.sleep(3000);
 		System.out.println(bannertext.getText());
+		
 		Thread.sleep(3000);
+		Utils.ScrollUntil(logo);
 		Utils.Full_Page_Scroll_Up();
+		Utils.FluentWaitforElement(logo,20);
 		
 		Utils.Waitfor(Home_Searchbutton, 10);
 		Home_Searchbutton.click();

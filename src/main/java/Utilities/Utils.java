@@ -59,7 +59,7 @@ public class Utils extends TestBase{
 		return destFile.getAbsolutePath();
 	}
 	
-	public static void WaitforElement(WebElement e, int i) {
+	public static void FluentWaitforElement(WebElement e, int i) {
 		Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(i)) // Maximum wait time
                 .pollingEvery(Duration.ofSeconds(2)) // Polling interval
