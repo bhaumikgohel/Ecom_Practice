@@ -164,15 +164,15 @@
                   <a name="Validate_Search_Product_Functionality">
                   </a> <!-- Validate_Search_Product_Functionality -->
                   <span class="method-name">Validate_Search_Product_Functionality</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1244, -1155)
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1244, -1794)
   (Session info: chrome=138.0.7204.185)
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a654c6b7283997d352318eb308a933ec, clickElement {id=f.999C1718D68E81A717094162886EE4E6.d.78F0BC381C801B9BB766C0538AE09ED8.e.607}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.185, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\1183\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51879/devtoo..., se:cdpVersion: 138.0.7204.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a654c6b7283997d352318eb308a933ec)] -&gt; xpath: //button[@data-id=&apos;search&apos;]]
-Session ID: a654c6b7283997d352318eb308a933ec
+Command: [1363cd897b70eeaacd98a2db39b5021d, clickElement {id=f.9FE06BDAA00A0436B86ABFC25B701DA9.d.B1C05648131BC4A74CC741546007B1EF.e.583}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.185, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\1183\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52485}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52485/devtoo..., se:cdpVersion: 138.0.7204.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1363cd897b70eeaacd98a2db39b5021d)] -&gt; xpath: //button[@data-id=&apos;search&apos;]]
+Session ID: 1363cd897b70eeaacd98a2db39b5021d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -183,7 +183,7 @@ Session ID: a654c6b7283997d352318eb308a933ec
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
 	at pages.HomePage.Search_Functionality(HomePage.java:95)
 	at testcases.HomePageTest.Validate_Search_Product_Functionality(HomePageTest.java:65)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -247,7 +247,7 @@ Session ID: a654c6b7283997d352318eb308a933ec
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Check ECom Site&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;Listeners.MyListeners&quot;/&gt;
+    &lt;listener class-name=&quot;utilities.MyListeners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -295,32 +295,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Validate_Search_Product_Functionality')
 data.setCell(0, 2, 'testcases.HomePageTest')
-data.setCell(0, 3, 1269);
+data.setCell(0, 3, 1449);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Validate_ManuText')
+data.setCell(1, 1, 'Validate_Get_Product_Text')
 data.setCell(1, 2, 'testcases.HomePageTest')
-data.setCell(1, 3, 152);
+data.setCell(1, 3, 451);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Validate_Get_Product_Text')
+data.setCell(2, 1, 'Validate_ManuText')
 data.setCell(2, 2, 'testcases.HomePageTest')
-data.setCell(2, 3, 85);
+data.setCell(2, 3, 397);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'Validate_HomePage_logo')
 data.setCell(3, 2, 'testcases.HomePageTest')
-data.setCell(3, 3, 59);
+data.setCell(3, 3, 132);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'Validate_Social_Media')
 data.setCell(4, 2, 'testcases.HomePageTest')
-data.setCell(4, 3, 47);
+data.setCell(4, 3, 73);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'Validate_HomePage_Title')
 data.setCell(5, 2, 'testcases.HomePageTest')
-data.setCell(5, 3, 28);
+data.setCell(5, 3, 36);
 window.suiteTableData['Check_ECom_Site']= { tableData: data, tableDiv: 'times-div-Check_ECom_Site'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Check_ECom_Site">
               </div> <!-- times-div-Check_ECom_Site -->
             </div> <!-- times-div -->
@@ -353,33 +353,33 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">Validate_HomePage_Title</span>
-                <span class="method-start">12214 ms</span>
+                <span class="method-start">12117 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Validate_HomePage_logo</span>
-                <span class="method-start">12410 ms</span>
+                <span class="method-start">12417 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Validate_Social_Media</span>
-                <span class="method-start">12649 ms</span>
+                <span class="method-start">12731 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Validate_ManuText</span>
-                <span class="method-start">12856 ms</span>
+                <span class="method-start">12963 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Validate_Get_Product_Text</span>
-                <span class="method-start">13139 ms</span>
+                <span class="method-start">13703 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Validate_Search_Product_Functionality</span>
-                <span class="method-start">13410 ms</span>
+                <span class="method-start">14649 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">quit</span>
-                <span class="method-start">15022 ms</span>
+                <span class="method-start">16366 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
