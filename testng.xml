@@ -3,7 +3,7 @@
 <suite name="Check ECom Site">
 
 <listeners>
-	<listener class-name="Listeners.MyListeners"></listener>
+	<listener class-name="utilities.MyListeners"></listener>
 </listeners>
 
   <test name="Test">
