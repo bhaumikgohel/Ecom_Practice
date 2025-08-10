@@ -55,13 +55,13 @@ public class HomePageTest extends TestBase implements ITestListener{
 	}
 	
 	@Test(priority = 5)
-	public void Validate_Get_Product_Text() {
+	public void Validate_Get_Product_Text() throws InterruptedException {
 		ProductName = homepage.Get_FirstProduct_Name();
 		
 	}
 	
 	@Test(priority = 6)
-	public void Validate_Search_Product_Functionality() {
+	public void Validate_Search_Product_Functionality() throws InterruptedException {
 		 homepage.Search_Functionality(ProductName);
 		
 	}
@@ -69,6 +69,7 @@ public class HomePageTest extends TestBase implements ITestListener{
 	
 	@AfterClass
 	public void quit() {
+		sa.assertAll();
 		driver.quit();
 	}
 	

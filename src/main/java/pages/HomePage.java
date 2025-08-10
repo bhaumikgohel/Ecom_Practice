@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 import Utilities.Utils;
 import base.TestBase;
@@ -15,14 +16,13 @@ public class HomePage extends TestBase{
 	
 	String ProductName;
 	ArrayList<String> ab;
+	SoftAssert sa = new SoftAssert();
 	
 	@FindBy(xpath = "(//img[@class='default-logo'])[1]")
 	WebElement logo;
 	
 	@FindBy(xpath = "(//div//a//span[@class='ct-icon-container'])[3]")
 	WebElement Social_Header_icon;
-	
-	
 	
 	@FindBy(xpath = "//nav[@id='header-menu-1']//li[contains(@class,'menu-item menu-item-type-post_type')]")
 	WebElement Menu;
@@ -31,10 +31,20 @@ public class HomePage extends TestBase{
 	WebElement First_Product_Name;
 	
 	@FindBy(xpath = "//button[@data-id='search']")
-	WebElement Searchbutton;
+	WebElement Home_Searchbutton;
 
 	@FindBy(xpath = "//input[@type='search']")
 	WebElement SearchTextBox;
+	
+	@FindBy(xpath = "//input[@type='search']")
+	WebElement Search_Button_Detail;
+	
+	//input[@class="modal-field"]/following-sibling::div[@class="ct-search-form-controls"]
+	
+	@FindBy(xpath = "(//h2[@class=\"elementor-heading-title elementor-size-default\"])[2]")
+	WebElement bannertext;
+	
+	
 	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -69,11 +79,17 @@ public class HomePage extends TestBase{
 		}
 		
 	}
-	public String Get_FirstProduct_Name() {
+	public String Get_FirstProduct_Name() throws InterruptedException {
 		
 		Utils.ScrollUntil(First_Product_Name);
 		
-		return ProductName = First_Product_Name.getText();
+		 ProductName = First_Product_Name.getText();
+		 
+		 Thread.sleep(3000);
+		 
+		 System.out.println(ProductName);
+		 
+		 return ProductName;
 
 		//ArrayList<ProductData> test = new ArrayList<>();
 		
@@ -87,16 +103,25 @@ public class HomePage extends TestBase{
 		
 		
 	}
-	public void Search_Functionality(String ProductName) {
+	public void Search_Functionality(String ProductName) throws InterruptedException {
 		
-		//Utils.ScrollUntil(logo);
+		Thread.sleep(3000);
+		Utils.ScrollUntil(bannertext);
+		Thread.sleep(3000);
+		System.out.println(bannertext.getText());
+		Thread.sleep(3000);
+		Utils.Full_Page_Scroll_Up();
 		
-		Utils.Waitfor(Searchbutton, 10);
-		Searchbutton.click();
+		Utils.Waitfor(Home_Searchbutton, 10);
+		Home_Searchbutton.click();
 		
 		Utils.Waitfor(SearchTextBox, 10);
 		SearchTextBox.sendKeys(ProductName);
 		
+		Utils.Waitfor(Search_Button_Detail, 10);
+		Search_Button_Detail.click();
+		
+		sa.assertEquals(ProductName, "Large Capacity Travel Cosmetic Bag,Multifunctional Storage Travel Makeup Bags,Compartment Cosmetic Toiletries Bag Travel Cosmetic Cases Waterproof Portable Makeup Pouch for Women Girls Men (Pack of 1pc)");
 		
 	}
 }
