@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+
 import Utilities.Utils;
 import base.TestBase;
 
@@ -129,6 +130,7 @@ public class HomePage extends TestBase{
 		Search_Button_Detail.click();
 		
 		sa.assertEquals(ProductName, "Large Capacity Travel Cosmetic Bag,Multifunctional Storage Travel Makeup Bags,Compartment Cosmetic Toiletries Bag Travel Cosmetic Cases Waterproof Portable Makeup Pouch for Women Girls Men (Pack of 1pc)");
+		sa.assertAll();
 		
 	}
 }
