@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
-public class Utils extends TestBase{
+public class ComUtils extends TestBase{
 
 	public static void Waitfor(WebElement e, int i) {
 		

@@ -69,7 +69,8 @@ public class HomePageTest extends TestBase implements ITestListener{
 	
 	@AfterClass
 	public void quit() {
-		driver.quit();
+		sa.assertAll();
+		driver.close();
 	}
 	
 }

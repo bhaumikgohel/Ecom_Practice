@@ -2,16 +2,15 @@ package pages;
 
 import java.util.ArrayList;
 
-import javax.swing.text.Utilities;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
-import Utilities.Utils;
+import Utilities.ComUtils;
 import base.TestBase;
+
 
 public class HomePage extends TestBase{
 	
@@ -82,7 +81,7 @@ public class HomePage extends TestBase{
 	}
 	public String Get_FirstProduct_Name() throws InterruptedException {
 		
-		Utils.ScrollUntil(First_Product_Name);
+		ComUtils.ScrollUntil(First_Product_Name);
 		
 		 ProductName = First_Product_Name.getText();
 		 
@@ -109,28 +108,28 @@ public class HomePage extends TestBase{
 	public void Search_Functionality(String ProductName) throws InterruptedException {
 		
 		Thread.sleep(3000);
-		Utils.ScrollUntil(bannertext);
-		Utils.FluentWaitforElement(bannertext,30);
+		ComUtils.ScrollUntil(bannertext);
+		ComUtils.FluentWaitforElement(bannertext,30);
 		
 		Thread.sleep(3000);
 		System.out.println(bannertext.getText());
 		
 		Thread.sleep(3000);
-		Utils.ScrollUntil(logo);
-		Utils.Full_Page_Scroll_Up();
-		Utils.FluentWaitforElement(logo,20);
+		ComUtils.ScrollUntil(logo);
+		ComUtils.Full_Page_Scroll_Up();
+		ComUtils.FluentWaitforElement(logo,20);
 		
-		Utils.Waitfor(Home_Searchbutton, 10);
+		ComUtils.Waitfor(Home_Searchbutton, 10);
 		Home_Searchbutton.click();
 		
-		Utils.Waitfor(SearchTextBox, 10);
+		ComUtils.Waitfor(SearchTextBox, 10);
 		SearchTextBox.sendKeys(ProductName);
 		
-		Utils.Waitfor(Search_Button_Detail, 10);
+		ComUtils.Waitfor(Search_Button_Detail, 10);
 		Search_Button_Detail.click();
 		
 		sa.assertEquals(ProductName, "Large Capacity Travel Cosmetic Bag,Multifunctional Storage Travel Makeup Bags,Compartment Cosmetic Toiletries Bag Travel Cosmetic Cases Waterproof Portable Makeup Pouch for Women Girls Men (Pack of 1pc)");
-		sa.assertAll();
+		
 		
 	}
 }
